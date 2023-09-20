@@ -25,8 +25,8 @@ async function fetchData() {
                 index_position: 2,
                 key_type: 'name',
                 lower_bound: accountName,
-                upper_bound: accountName,            
-                limit: 100, 
+                upper_bound: accountName,
+                limit: 100,
                 next_key: nextKey,
             });
 
@@ -100,9 +100,9 @@ function renderTiersAndTotals(tiersAndTotals) {
     // Get a reference to the HTML element where you want to display the results
     const resultsContainer = document.getElementById('results-container');
     const accountInfoDiv = document.getElementById('account-info');
-    
+
     // Display the account name in the account-info div
-    accountInfoDiv.textContent = `Account: ${accountName || 'N/A'}`;
+    accountInfoDiv.textContent = `${accountName || 'N/A'}`;
 
     // Iterate through the tiers and total amounts
     for (const tierId in tiersAndTotals) {
